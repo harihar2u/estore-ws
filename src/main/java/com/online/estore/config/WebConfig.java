@@ -19,31 +19,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login.html").setViewName("login");
-        registry.addViewController("/about.html").setViewName("about");
-        registry.addViewController("/contact.html").setViewName("contact");
-
-        registry.addViewController("/wishlist.html").setViewName("wishlist");
-        registry.addViewController("/register.html").setViewName("register");
-        registry.addViewController("/shipping.html").setViewName("shipping");
-
-        registry.addViewController("/kitchen.html").setViewName("kitchen");
-        registry.addViewController("/care.html").setViewName("shipping");
-        registry.addViewController("/hold.html").setViewName("hold");
-        registry.addViewController("/codes.html").setViewName("codes");
-        registry.addViewController("/single.html").setViewName("single");
-        registry.addViewController("/offer.html").setViewName("offer");
-        //registry.addViewController("/checkout.html").setViewName("checkout");
-        registry.addViewController("/payment.html").setViewName("payment");
-
-        registry.addViewController("/product.html").setViewName("product");
-        registry.addViewController("/product2.html").setViewName("product2");
-        registry.addViewController("/single2.html").setViewName("single2");
-        registry.addViewController("/faqs.html").setViewName("faqs");
-        registry.addViewController("/icons.html").setViewName("icons");
-        registry.addViewController("/typography.html").setViewName("typography");
-
-
 
     }
 

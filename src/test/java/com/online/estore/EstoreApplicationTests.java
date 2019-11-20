@@ -34,9 +34,10 @@ public class EstoreApplicationTests {
 
     @Test
     public void contextLoads() {
+
     }
 
-    //@Before
+    @Before
     public void setup() {
 
         //Product category

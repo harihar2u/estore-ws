@@ -16,9 +16,4 @@ public class HomeController {
         return "index";
     }
 
-    @PostMapping("/checkout")
-    public String checkout(Model model) {
-        return "checkout";
-    }
-
    }
