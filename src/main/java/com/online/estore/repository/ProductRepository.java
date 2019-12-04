@@ -5,5 +5,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
 
-
+    @Override
+    <S extends Product> S save(S s);
 }
