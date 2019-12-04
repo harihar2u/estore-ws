@@ -20,6 +20,7 @@ import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Ignore
 public class EstoreApplicationTests {
 
     @Autowired
