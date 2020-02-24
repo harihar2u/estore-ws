@@ -15,6 +15,11 @@
 *.iws
 *.iml
 *.ipr
+LOG_PATH_IS_UNDEFINED
+/target/*
+/deployment
+.mvn
+.idea
 
 ### NetBeans ###
 /nbproject/private/
