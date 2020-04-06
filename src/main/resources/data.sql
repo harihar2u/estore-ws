@@ -1,3 +1,5 @@
+insert into ACS_USER(id, username, password, role, is_active) values(1, 'Admin', 'Admin', 'ROLE_ADMIN', true);
+
 -- Product type
 insert into product_type(id , name, active) values(1, 'Kitchen', true);
 

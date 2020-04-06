@@ -7,7 +7,6 @@
             </pattern>
         </encoder>
     </appender>
-
     <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH}/log.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -24,9 +23,16 @@
         </rollingPolicy>
     </appender>
 
-    <logger name="com.online.estore" level="warn">
+    <logger name="com.online.estore" level="INFO">
         <appender-ref ref="STDOUT"/>
-        <appender-ref ref="SAVE-TO-FILE"/>
+    </logger>
+
+        <logger name="org.springframework" level="DEBUG">
+            <appender-ref ref="STDOUT"/>
+        </logger>
+
+    <logger name="org.apache.http.wire" level="DEBUG">
+        <appender-ref ref="STDOUT"/>
     </logger>
 
     <root level="info">
