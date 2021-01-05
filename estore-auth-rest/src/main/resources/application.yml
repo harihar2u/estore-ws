@@ -1,0 +1,21 @@
+spring:
+  datasource:
+      url: jdbc:h2:mem:testdb
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+  jpa:
+      show-sql: true
+      hibernate:
+      ddl-auto: validate
+      properties.hibernate.globally_quoted_identifiers: false
+  h2.console.enabled: true
+
+server:
+  port: 8083
+  servlet:
+    context-path: /estore-acs
+
+springdoc.packages-to-scan: com.online.estore.acs.api.controller
+
+
