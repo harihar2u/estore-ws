@@ -1,8 +1,8 @@
-package com.online.estore.acs.api.controller;
+package com.online.estore.auth.api.controller;
 
-import com.online.estore.acs.api.model.AuthenticationRequest;
-import com.online.estore.acs.api.model.AuthenticationResponse;
-import com.online.estore.acs.api.utils.JwtUtils;
+import com.online.estore.auth.api.model.AuthenticationRequest;
+import com.online.estore.auth.api.model.AuthenticationResponse;
+import com.online.estore.auth.api.utils.JwtUtils;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -24,7 +24,7 @@ public class AcsController {
     @Inject
     private UserDetailsService acsUserDetailsService;
 
-    @PostMapping(path = "/authenticate", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(path = "/authenticate", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) throws Exception {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
@@ -35,7 +35,7 @@ public class AcsController {
         UserDetails userDetails = acsUserDetailsService.loadUserByUsername(request.getUsername());
         //generate Jwt
         AuthenticationResponse response = new AuthenticationResponse();
-        response.setJwt(JwtUtils.generateToken(userDetails));
+        response.setToken(JwtUtils.generateToken(userDetails));
         return ResponseEntity.ok(response);
     }
 

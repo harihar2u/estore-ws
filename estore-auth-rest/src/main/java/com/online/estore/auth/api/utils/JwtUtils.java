@@ -1,4 +1,4 @@
-package com.online.estore.acs.api.utils;
+package com.online.estore.auth.api.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

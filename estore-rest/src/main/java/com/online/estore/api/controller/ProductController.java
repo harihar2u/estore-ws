@@ -1,4 +1,4 @@
-package com.online.estore.acs.api.controller;
+package com.online.estore.api.controller;
 
 import com.online.estore.core.entity.Product;
 import com.online.estore.core.repository.ProductRepository;

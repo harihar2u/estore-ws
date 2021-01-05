@@ -1,4 +1,4 @@
-package com.online.estore.acs.api;
+package com.online.estore.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("com.online.estore.acs")
+@ComponentScan("com.online.estore.api")
 @EnableJpaRepositories("com.online.estore.core.repository")
 @EntityScan("com.online.estore.core.entity")
 public class EstoreRestApplication {

@@ -1,6 +1,6 @@
-package com.online.estore.repository;
+package com.online.estore.core.repository;
 
-import com.online.estore.model.Supplier;
+import com.online.estore.core.entity.Supplier;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface SupplierRepository extends PagingAndSortingRepository<Supplier, Long> {

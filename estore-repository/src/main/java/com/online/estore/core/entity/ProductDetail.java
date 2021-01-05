@@ -1,4 +1,4 @@
-package com.online.estore.core.model;
+package com.online.estore.core.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,11 +17,6 @@ public class ProductDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @NonNull
-    @ManyToOne
-    @JoinColumn(name = "product_id", insertable = false, updatable = false)
-    private Product product;
 
     @NonNull
     private float weight;

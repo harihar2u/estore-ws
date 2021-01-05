@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>estore-acs</artifactId>
+    <artifactId>estore-auth-rest</artifactId>
 
 
     <dependencies>
@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>com.online</groupId>
-            <artifactId>estore-acs-api</artifactId>
+            <artifactId>estore-auth-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -42,5 +42,27 @@
             <artifactId>estore-swagger</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.online</groupId>
+            <artifactId>estore-database</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <configuration>
+                    <repository>${docker.registry}/estore/${project.artifactId}</repository>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

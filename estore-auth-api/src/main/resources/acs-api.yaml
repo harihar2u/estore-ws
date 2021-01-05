@@ -3,7 +3,7 @@ info:
   title: OpenAPI definition
   version: v0
 servers:
-  - url: "http://localhost:8083/estore-acs"
+  - url: "http://localhost:8083/estore-auth"
     description: Generated server url
 paths:
   /api/v1/authenticate:
@@ -60,5 +60,5 @@ components:
     AuthenticationResponse:
       type: object
       properties:
-        jwt:
+        token:
           type: string

@@ -1,4 +1,4 @@
-package com.online.estore.acs.api.service;
+package com.online.estore.auth.api.service;
 
 import com.online.estore.core.entity.User;
 import com.online.estore.core.repository.UserRepository;

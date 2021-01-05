@@ -1,6 +1,6 @@
-package com.online.estore.acs.api.filters;
+package com.online.estore.auth.api.filters;
 
-import com.online.estore.acs.api.utils.JwtUtils;
+import com.online.estore.auth.api.utils.JwtUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

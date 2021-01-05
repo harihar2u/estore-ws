@@ -1,4 +1,4 @@
-package com.online.estore.acs.api.config;
+package com.online.estore.auth.api.config;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

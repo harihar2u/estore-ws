@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>estore-acs-api</artifactId>
+    <artifactId>estore-auth-api</artifactId>
 
 
     <dependencies>
@@ -101,7 +101,7 @@
                             <generateModelDocumentation>false</generateModelDocumentation>
                             <generateApis>false</generateApis>
                             <generateSupportingFiles>false</generateSupportingFiles>
-                            <modelPackage>com.online.estore.acs.api.model</modelPackage>
+                            <modelPackage>com.online.estore.auth.api.model</modelPackage>
                             <configOptions>
                                 <sourceFolder>src/main/java</sourceFolder>
                             </configOptions>

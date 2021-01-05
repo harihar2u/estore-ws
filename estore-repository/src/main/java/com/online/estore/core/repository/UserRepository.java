@@ -1,6 +1,6 @@
-package com.online.estore.repository;
+package com.online.estore.core.repository;
 
-import com.online.estore.model.User;
+import com.online.estore.core.entity.User;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface UserRepository extends PagingAndSortingRepository<User, Long>  {

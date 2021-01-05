@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>estore</artifactId>
+        <artifactId>estore-pom</artifactId>
         <groupId>com.online</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -41,18 +41,31 @@
         </dependency>
         <dependency>
             <groupId>com.online</groupId>
-            <artifactId>estore-rest</artifactId>
+            <artifactId>estore-repository</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.online</groupId>
+            <artifactId>estore-database</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>estore</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <configuration>
+                    <repository>${docker.registry}/estore/${project.artifactId}</repository>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

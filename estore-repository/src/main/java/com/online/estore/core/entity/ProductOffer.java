@@ -1,4 +1,4 @@
-package com.online.estore.core.model;
+package com.online.estore.core.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

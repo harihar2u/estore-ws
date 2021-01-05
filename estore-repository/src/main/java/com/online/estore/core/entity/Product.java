@@ -1,4 +1,4 @@
-package com.online.estore.core.model;
+package com.online.estore.core.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,11 +26,13 @@ public class Product {
     @NonNull
     private String description;
 
-    @NonNull
+    @ManyToOne
+    private ProductType productType;
+
     @ManyToOne
     private ProductSubType productSubType;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     private Collection<ProductDetail> productDetails;
 

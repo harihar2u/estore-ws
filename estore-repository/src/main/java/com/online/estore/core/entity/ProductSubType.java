@@ -1,4 +1,4 @@
-package com.online.estore.core.model;
+package com.online.estore.core.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,6 +6,8 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.HashSet;
 
 @Data
 @NoArgsConstructor
@@ -18,14 +20,13 @@ public class ProductSubType {
     private Long id;
 
     @NonNull
-    @ManyToOne
-    @JoinColumn(name = "product_type_id", insertable = false, updatable = false)
-    private ProductType productType;
-
-    @NonNull
     private String name;
+
     @NonNull
     private boolean active;
 
+    @NonNull
+    @ManyToOne
+    private ProductType productType;
 
 }

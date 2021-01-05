@@ -23,7 +23,7 @@
         </rollingPolicy>
     </appender>
 
-    <logger name="com.online.estore.acs" level="WARN">
+    <logger name="com.online.estore.auth" level="WARN">
         <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="org.springframework" level="WARN">

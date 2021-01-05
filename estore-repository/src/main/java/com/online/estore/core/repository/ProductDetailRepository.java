@@ -1,7 +1,6 @@
-package com.online.estore.repository;
+package com.online.estore.core.repository;
 
-import com.online.estore.model.Product;
-import com.online.estore.model.ProductDetail;
+import com.online.estore.core.entity.ProductDetail;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface ProductDetailRepository extends PagingAndSortingRepository<ProductDetail, Long> {

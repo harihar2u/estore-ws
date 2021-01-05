@@ -1,4 +1,4 @@
-package com.online.estore.core.model;
+package com.online.estore.core.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,8 +23,8 @@ public class ProductType {
     @NonNull
     private boolean active;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "product_type_id")
-    private Collection<ProductSubType> subType = new HashSet<ProductSubType>();
+    @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY)
+    private Collection<ProductSubType> productSubTypes = new HashSet<ProductSubType>();
+
 
 }

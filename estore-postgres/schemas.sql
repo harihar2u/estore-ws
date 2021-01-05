@@ -1,4 +1,4 @@
 -- create schemas
-CREATE USER andis_6 PASSWORD 'andis_6';
-ALTER ROLE andis_6 SET SEARCH_PATH = "$user",public;
-CREATE SCHEMA AUTHORIZATION andis_6;
+CREATE USER estore PASSWORD 'estore';
+ALTER ROLE estore SET SEARCH_PATH = "$user",public;
+CREATE SCHEMA IF NOT EXISTS AUTHORIZATION estore;

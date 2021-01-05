@@ -1,4 +1,4 @@
-package com.online.estore.acs.api;
+package com.online.estore.auth.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

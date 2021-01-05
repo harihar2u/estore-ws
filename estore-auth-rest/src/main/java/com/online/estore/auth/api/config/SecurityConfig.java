@@ -1,6 +1,6 @@
-package com.online.estore.acs.api.config;
+package com.online.estore.auth.api.config;
 
-import com.online.estore.acs.api.filters.JwtAuthenticationFilter;
+import com.online.estore.auth.api.filters.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -55,7 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index","/api/v1", "/api/v1/authenticate").permitAll()
-                .antMatchers("/v3/api-docs/**","/swagger-ui/**", "/h2-console/**").permitAll()
+                .antMatchers("/v3/api-docs/**","/swagger-ui**", "/swagger-ui/**", "/h2-console/**").permitAll()
                 .antMatchers("/**").authenticated()
                 .and().exceptionHandling().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
